@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 <body>
     <a href="{{url("/employee")}}">Employee</a>
-    <table border="1">
+    <table border="1"style="margin-left: auto;
+  margin-right: auto;margin-top:200px; color:white; background-color:black; padding:100px" >
 
+<tr>
+    <th >FirstName</th>
+    <th>LastName</th>
+    <th>Date of Birth</th>
+    <th>NIC</th>
+    <th>Join Date</th>
+    <th>Gender</th>
+    <th>District</th>
+
+
+
+
+</tr>
         <tr>
 
             <td>{{$employees->firstname}}</td>

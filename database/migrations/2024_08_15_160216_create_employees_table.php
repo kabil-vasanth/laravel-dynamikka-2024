@@ -16,9 +16,9 @@ return new class extends Migration
 
             $table->string('firstname', length: 50);
             $table->string('lastname', length: 50);
-            $table->integer('date_of_birth');
+            $table->date('date_of_birth');
             $table->String('nic_number');
-            $table->integer('join_date');
+            $table->date('join_date');
             $table->string('gender', length: 10);
             $table->string('district', length: 50);
 
