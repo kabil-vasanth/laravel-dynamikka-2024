@@ -12,7 +12,7 @@
     <table border="1" style="margin-left: auto;
   margin-right: auto;margin-top:200px;color:white; background-color:black; padding:100px">
         <tr>
-            <th >FirstName</th>
+            <th>FirstName</th>
             <th>LastName</th>
             <th>Date of Birth</th>
             <th>NIC</th>
