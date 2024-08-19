@@ -19,7 +19,10 @@
             <th>Join Date</th>
             <th>Gender</th>
             <th>District</th>
-            <th>Click</th>
+
+            <th>job_roll</th>
+            <th>Rollid</th>
+
 
 
 
@@ -31,6 +34,8 @@
         <tr>
 
 
+
+            {{-- <td><a href="{{url("roll/$employee->id")}}">{{$employee->firstname}}</a></td> --}}
             <td>{{$employee->firstname}}</td>
             <td>{{$employee->lastname}}</td>
             <td>{{$employee->date_of_birth}}</td>
@@ -38,7 +43,9 @@
             <td>{{$employee->join_date}}</td>
             <td>{{$employee->gender}}</td>
             <td>{{$employee->district}}</td>
-            <td><a href="{{url("employee/$employee->id")}}">show</a></td>
+            <td><a href="{{url("roll/$employee->roll_id")}}">{{$employee->job_roll}}</a></td>
+            <td>{{$employee->roll_id}}</td>
+            {{-- <td><a href="{{url("employee/$employee->id")}}">show</a></td> --}}
 
         </tr>
 

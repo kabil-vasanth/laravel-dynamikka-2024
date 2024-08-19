@@ -20,6 +20,8 @@
     <th>Join Date</th>
     <th>Gender</th>
     <th>District</th>
+    <th>job_roll</th>
+    <th>roll_id</th>
 
 
 
@@ -34,6 +36,8 @@
             <td>{{$employees->join_date}}</td>
             <td>{{$employees->gender}}</td>
             <td>{{$employees->district}}</td>
+            <td>{{$employees->job_roll}}</td>
+            <td>{{$employees->roll_id}}</td>
             {{-- <td><a href="{{url(employee/$employeess->id)}}"></a>show</td> --}}
 
         </tr>
