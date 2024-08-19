@@ -15,24 +15,23 @@
         <td>gradeorder</td>
         <td>gradecolor</td>
         <td>gradegroup</td></tr>
-    @foreach ($student as $students)
-    <tr>
-        <td>{{$students->firstname}}</a></td>
-        <td>{{$students->lastname}}</td>
 
-        <td><a href="{{url("grades/$students->grade_id")}}">{{$students->grade->grade_name}}</td>
-        <td>{{$students->grade->grade_order}}</td>
-        <td>{{$students->grade->grade_color}}</td>
-        <td>{{$students->grade->grade_group}}</td>
+    <tr>
+        <td>{{$student->firstname}}</td>
+        <td>{{$student->lastname}}</td>
+
+        <td>{{$student->grade->grade_name}}</td>
+        <td>{{$student->grade->grade_order}}</td>
+        <td>{{$student->grade->grade_color}}</td>
+        <td>{{$student->grade->grade_group}}</td>
 
      </tr>
 
 
 
-        @endforeach
+        
 
  </table>
-
 
 
 </body>

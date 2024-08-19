@@ -7,13 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{{url("students/")}}">Student</a>
-    <table border="1">
-
-        <tr><td> {{$student->firstname}}</td>
-            <td>{{$student->lastname}}</td>
-
-        </tr>
+   
 
 </body>
 </html>
