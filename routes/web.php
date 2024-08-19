@@ -1,20 +1,24 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Employee;
+use App\Models\Student;
+
+Route::get('/students', function () {
+
+    $student=Student::all();
 
 
-Route::get('/employee', function () {
 
-    $employees=Employee::all();
+    return view('student.index',compact('student'));
 
-    return view('employee.index',compact('employees'));
 });
 
-Route::get('/employee/{id}', function ($id) {
+Route::get('/students/{id}', function ($id) {
 
-    $employees=Employee::find($id);
+    $student=Student::find($id);
 
-    return view('employee.employee',compact('employees'));
+
+
+    return view('student.show',compact('student'));
+
 });
-
