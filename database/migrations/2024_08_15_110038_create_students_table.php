@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('firstname', length: 50);
             $table->string('lastname', length: 50);
+            $table->integer('grade_id');
+
             $table->timestamps();
         });
     }
