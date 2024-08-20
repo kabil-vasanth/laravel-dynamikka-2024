@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>{{$employees->rollname}}</h1>
+    <td><a href="{{url("/employee")}}">Employee details</a></td>
 
 
     <table border="1" style="margin-left: auto;
@@ -50,6 +51,9 @@
 
 
       </table>
+
+
+        
 
 </body>
 </html>

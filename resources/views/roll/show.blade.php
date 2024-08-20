@@ -49,11 +49,13 @@
           </tr>
 
 
+          {{-- <td><a href="{{url("roll/$employees->roll_id")}}">{{$employee->job_roll}}</a></td> --}}
 
 
 
 
       </table>
+      <td><a href="{{url("roll/$employees->roll_id")}}">Employee personal details</a></td>
 
 </body>
 </html>
