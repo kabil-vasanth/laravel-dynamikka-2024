@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('subject_name', length: 30);
             $table->decimal('subject_order');
-            $table->string('color',length: 30);
+            $table->string('subject_color',length: 30);
             $table->timestamps();
         });
     }
