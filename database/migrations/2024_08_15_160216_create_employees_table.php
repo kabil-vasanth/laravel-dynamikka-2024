@@ -21,6 +21,9 @@ return new class extends Migration
             $table->date('join_date');
             $table->string('gender', length: 10);
             $table->string('district', length: 50);
+            $table->integer('roll_id');
+            $table->string('job_roll', length: 50);
+
 
             $table->timestamps();
         });
