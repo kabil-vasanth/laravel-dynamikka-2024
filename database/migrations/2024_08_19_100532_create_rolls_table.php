@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->string('rollname', length: 50);
             $table->string('roll_category', length: 50);
-            $table->date('roll_color');
+            $table->string('roll_color');
 
             $table->timestamps();
         });
