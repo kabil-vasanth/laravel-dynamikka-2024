@@ -29,15 +29,9 @@
 
           </tr>
           @foreach ($rolls as $roll)
-
-
-
-          <tr>
-
-
-
-              {{-- <td><a href="{{url("roll/$employee->id")}}">{{$employee->firstname}}</a></td> --}}
-              <td><a href="{{url("roll/$roll->employee_id")}}">{{$roll->firstname}}</a></td>
+<tr>
+{{-- <td><a href="{{url("roll/$employee->id")}}">{{$employee->firstname}}</a></td> --}}
+              <td><a href="{{url("employee/$roll->id")}}">{{$roll->firstname}}</a></td>
 
               <td>{{$roll->lastname}}</td>
               <td>{{$roll->date_of_birth}}</td>
@@ -48,10 +42,9 @@
               <td>{{$roll->job_roll}}</td>
 
               {{-- <td><a href="{{url("employee/$employee->id")}}">show</a></td> --}}
+             </tr>
 
-          </tr>
-
-          @endforeach
+@endforeach
 
 
 
