@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>students Details</h1>
     <table border="1">
         <tr>
             <td>firstname</td>
@@ -14,7 +15,8 @@
         <td>gradename</td>
         <td>gradeorder</td>
         <td>gradecolor</td>
-        <td>gradegroup</td></tr>
+        <td>gradegroup</td>
+        </tr>
     @foreach ($student as $students)
     <tr>
         <td>{{$students->firstname}}</a></td>
@@ -24,6 +26,8 @@
         <td>{{$students->grade->grade_order}}</td>
         <td>{{$students->grade->grade_color}}</td>
         <td>{{$students->grade->grade_group}}</td>
+
+
 
      </tr>
 

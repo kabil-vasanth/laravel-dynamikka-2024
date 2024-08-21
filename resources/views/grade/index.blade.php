@@ -32,6 +32,17 @@
 
 </table>
 
+<th><h1>grade  {{$grade->grade_group}} subjects</h1></th>
+<br>
+<table border="1">
+@foreach ($grade->subjects as $subject)
+<td>{{$subject->subject_name}}
+
+@endforeach
+
+</table>
+
+
 
 </body>
 </html>

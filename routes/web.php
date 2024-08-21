@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Student;
 use App\Models\Grade;
+use App\Models\Subject;
 
 Route::get('/students', function () {
 
@@ -17,7 +18,7 @@ Route::get('/students', function () {
 Route::get('/students/{id}', function ($id) {
 
     $student=Student::find($id);
-   
+
 
 
 

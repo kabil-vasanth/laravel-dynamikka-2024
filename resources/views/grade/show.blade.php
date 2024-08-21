@@ -29,9 +29,28 @@
 
 
 
-        
+
 
  </table>
+ <br>
+ <h1>student subject details</h1>
+
+ <table border="1">
+@foreach ($student->subjects as $subject )
+<tr>
+<td>{{$subject->subject_name}}</td>
+<td>{{$subject->subject_order}}</td>
+<td>{{$subject->subject_color}}</td>
+</tr>
+
+@endforeach
+
+
+
+
+
+
+</table>
 
 
 </body>

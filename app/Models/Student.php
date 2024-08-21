@@ -13,4 +13,8 @@ class Student extends Model
     {
         return $this->belongsTo(Grade::class);
     }
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class);
+    }
 }
