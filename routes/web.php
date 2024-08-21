@@ -7,8 +7,10 @@ use App\Models\Subject;
 
 Route::get('/students', function () {
 
-    $student=Student::all();
+     $student=Student::all();
+    // $student = DB::Select(*from students')->get();
 
+dd($student);
 
 
     return view('student.index',compact('student'));
