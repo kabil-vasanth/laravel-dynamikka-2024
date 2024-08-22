@@ -2,6 +2,9 @@
 
 namespace App\Models;
 use App\Models\Grade;
+use App\Models\Student;
+
+
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,6 +19,6 @@ class Subject extends Model
     }
     public function students()
     {
-        return $this->belongsToMany(Subject::class);
+        return $this->belongsToMany(Student::class);
     }
 }

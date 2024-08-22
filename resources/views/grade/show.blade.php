@@ -38,9 +38,10 @@
  <table border="1">
 @foreach ($student->subjects as $subject )
 <tr>
-<td>{{$subject->subject_name}}</td>
+<td><a href="{{url("subjects/$subject->id")}}">{{$subject->subject_name}}</a></td>
 <td>{{$subject->subject_order}}</td>
 <td>{{$subject->subject_color}}</td>
+
 </tr>
 
 @endforeach

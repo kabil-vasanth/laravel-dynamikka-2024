@@ -10,7 +10,7 @@ Route::get('/students', function () {
      $student=Student::all();
     // $student = DB::Select(*from students')->get();
 
-dd($student);
+
 
 
     return view('student.index',compact('student'));
@@ -40,3 +40,15 @@ Route::get('/grades/{id}', function ($id) {
     return view('grade.index',compact('grade','students'));
 
 });
+
+Route::get('/subjects/{id}', function ($id) {
+
+    $subjects=Subject::find($id);
+    // $students=Grade::find($id)->students;
+
+
+
+    return view('subject.index',compact('subjects'));
+
+});
+
