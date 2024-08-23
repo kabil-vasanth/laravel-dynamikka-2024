@@ -12,7 +12,7 @@
 
 
     <h1>{{$grade->grade_name}}</h1>
-    <table border="1" class="table table-success table-striped ">
+    <table border="1" class="table table-success table-striped " style="width: min-content; margin-left:200px; margin-top:50px">
 
         <tr>
             <th>firstname</th>
@@ -37,7 +37,7 @@
 
 <th><h1>grade  {{$grade->grade_group}} subjects</h1></th>
 <br>
-<table border="1" class="table table-success table-striped ">
+<table border="1" class="table table-success table-striped " style="width: min-content; margin-left:300px; margin-top:100px">
 @foreach ($grade->subjects as $subject)
 <td>{{$subject->subject_name}}
 
