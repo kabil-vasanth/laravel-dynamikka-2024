@@ -20,7 +20,7 @@
         </tr>
     @foreach ($student as $students)
     <tr>
-        <td>{{$students->firstname}}</a></td>
+        <td><a href="{{url("students/$students->id")}}">{{$students->firstname}}</a></td>
         <td>{{$students->lastname}}</td>
 
         <td ><a href="{{url("grades/$students->grade_id")}}" style="color: green">{{$students->grade->grade_name}}</td>

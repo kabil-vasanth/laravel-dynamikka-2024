@@ -21,11 +21,13 @@
           <td>  <h1>gradegroup</h1></td>
         </tr>
 
+
+
         <tr>
             <td>{{ $student->firstname }}</td>
             <td>{{ $student->lastname }}</td>
 
-            <td>{{ $student->grade->grade_name }}</td>
+            <td><a href="{{url("grades/$student->grade_id")}}">{{ $student->grade->grade_name }}</a></td>
             <td>{{ $student->grade->grade_order }}</td>
             <td>{{ $student->grade->grade_color }}</td>
             <td>{{ $student->grade->grade_group }}</td>

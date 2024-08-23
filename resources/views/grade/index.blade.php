@@ -39,11 +39,12 @@
 <br>
 <table border="1" class="table table-success table-striped " style="width: min-content; margin-left:300px; margin-top:100px">
 @foreach ($grade->subjects as $subject)
-<td>{{$subject->subject_name}}
+<td><a href="{{url("subjects/$subject->id")}}">{{$subject->subject_name}}</a></td>
 
 @endforeach
 
 </table>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
