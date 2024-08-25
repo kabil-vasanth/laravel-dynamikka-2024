@@ -35,7 +35,12 @@ class GradeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $grade=Grade::find($id);
+   $students=Grade::find($id)->students;
+
+
+
+     return view('grade.index',compact('grade','students'));
     }
 
     /**
@@ -61,5 +66,5 @@ class GradeController extends Controller
     {
         //
     }
-   
+
 }

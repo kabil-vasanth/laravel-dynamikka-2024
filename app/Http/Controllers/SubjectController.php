@@ -14,7 +14,13 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        //
+        $subjects=Subject::find($id);
+ $students=Grade::find($id)->students;
+
+
+
+    return view('subject.index',compact('subjects'));
+
     }
 
     /**

@@ -9,15 +9,21 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $student=Student::all();
+         $input = $request->all();
+         dd($input);
+        //  $name=$request->query('myname');
+
+
+        $students=Student::paginate(15);
+
         // $student = DB::Select(*from students')->get();
 
 
+        // return $name;
 
-
-        return view('student.index',compact('student'));
+        return view('student.index',compact('students'));
     }
 
     /**

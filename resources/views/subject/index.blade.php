@@ -14,8 +14,8 @@
 
     <tr>
 
-        <td><a href="{{url("students/$student->id")}}">{{$student->firstname}}</a></td>
-        <td>{{$student->lastname}}</td>
+        <td><a href="{{url("students/$student->id")}}">{{$student->first_name}}</a></td>
+        <td>{{$student->last_name}}</td>
 
         {{-- <td><a href="{{url("grades/$students->grade_id")}}">{{$students->grade->grade_name}}</td>
         <td>{{$students->grade->grade_order}}</td>
