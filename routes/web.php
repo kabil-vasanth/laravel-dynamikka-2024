@@ -22,16 +22,16 @@ Route::resources(([
     'subjects'=>SubjectController::class,
 ]));
 
-// Route::get('/students/{id}', function ($id) {
+//  Route::get('/studentsss', function () {
 
-//     $student=Student::find($id);
-
-
+//      $studentsss=Student::all();
 
 
-//     return view('grade.show',compact('student'));
 
-// });
+
+//     return view('pages.dashboard',compact('studentsss'));
+
+//  });
 
 
 

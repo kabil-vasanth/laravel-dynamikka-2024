@@ -11,8 +11,8 @@ class StudentController extends Controller
      */
     public function index(Request $request)
     {
-         $input = $request->all();
-         dd($input);
+        //  $input = $request->all();
+        //  dd($input);
         //  $name=$request->query('myname');
 
 
@@ -23,7 +23,7 @@ class StudentController extends Controller
 
         // return $name;
 
-        return view('student.index',compact('students'));
+        return view('pages.dashboard',compact('students'));
     }
 
     /**

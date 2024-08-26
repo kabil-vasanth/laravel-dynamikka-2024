@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 style="font-style:italic">Students Details</h1>
-    {{$students->total()}}
+    {{-- {{$students->total()}} --}}
     <table border="1" class="table table-success table-striped " style="width: min-content; margin-left:300px; margin-top:200px" >
         <tr>
             <th>firstname</th>
