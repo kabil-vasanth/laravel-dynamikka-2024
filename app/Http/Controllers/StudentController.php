@@ -9,14 +9,14 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($p)
     {
 //           $input = $request->all();
 
 //           $name=$request->query('page');
 // dd($name);
 
-          $students=Student::paginate(15);
+
 
 
         // $student = DB::Select(*from students')->get();
@@ -24,7 +24,7 @@ class StudentController extends Controller
 
         // return $name;
         $students=Student::paginate(15);
-        return view('pages.dashboard',compact('students'));
+        return view('pages.'.$p,compact('students'));
     }
 
     /**
