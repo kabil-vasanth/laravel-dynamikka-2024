@@ -22,6 +22,16 @@ Route::resources(([
     'subjects'=>SubjectController::class,
 ]));
 
+
+Route::get('/{pages}', function ($pages='welcome') {
+
+
+
+
+
+        return view('pages/'.$pages);
+});
+
 //  Route::get('/studentsss', function () {
 
 //      $studentsss=Student::all();
