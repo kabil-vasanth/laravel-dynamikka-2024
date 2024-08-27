@@ -1,7 +1,14 @@
 <x-layout-static>
 <body>
-<h1>Subjects Details</h1>
-    <table border="1"  class="table table-success table-striped " style="width:80%; margin-left:100px" >
+<h3>Subjects Details</h3>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        DataTable Example
+    </div>
+    <div class="card-body">
+    <table border="1"  class="table table-success table-striped " id="datatablesSimple" style="width:80%; margin-left:100px" >
         <tr>
 
         <th>Subjectname</th>
@@ -31,6 +38,10 @@
 
         @endforeach
     </table>
+    <a href="/students" class="btn btn-primary">Go Students</a>
+    <a href="/grades" class="btn btn-primary">Go Grades</a>
+    </div>
+</div>
     {{$subjects->links()}}
 
 

@@ -1,41 +1,57 @@
 <x-layout-static>
 <body>
 
+    <h3 style="font-style:italic">Grades  Details</h3>
+    <div class="row">
+        <div class="col-sm-6" style="width:500px; margin-top:100px; margin-left:70px">
+          <div class="card">
+            <div class="card-body">
+
+                <h3>{{$grade->grade_name}}</h3>
+                <table border="1" class="table table-success table-striped " >
+
+                    <tr>
+                        <th>firstname</th>
+                    <th>lastname</th>
+                   </tr>
+
+                @foreach ($students as $student)
+                <tr>
+
+                    <td><a href="{{url("students/$student->id")}}">{{$student->first_name}}</a></td>
+                    <td>{{$student->last_name}}</td>
+                {{-- <td><a href="{{url("students/$students->id")}}">show</a></td> --}}
+                </tr>
 
 
-    <h1>{{$grade->grade_name}}</h1>
-    <table border="1" class="table table-success table-striped " style="width: min-content; margin-left:200px; margin-top:50px">
 
-        <tr>
-            <th>firstname</th>
-        <th>lastname</th>
-       </tr>
+                    @endforeach
 
-    @foreach ($students as $student)
-    <tr>
-
-        <td><a href="{{url("students/$student->id")}}">{{$student->first_name}}</a></td>
-        <td>{{$student->last_name}}</td>
-    {{-- <td><a href="{{url("students/$students->id")}}">show</a></td> --}}
-    </tr>
+            </table>
+              <a href="/grades" class="btn btn-primary">Go Grades</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6" style="width:500px; margin-top:100px">
+          <div class="card">
+            <div class="card-body">
+                <th><h3>Grade  {{$grade->grade_group}} subjects</h3></th>
 
 
+                <table border="1" class="table table-success table-striped " >
+                    <tr><th>Subjects</th><tr>
+                @foreach ($grade->subjects as $subject)
+                <tr><td><a href="{{url("subjects/$subject->id")}}">{{$subject->subject_name}}</a></td></tr>
 
-        @endforeach
+                @endforeach
 
-</table>
-<br>
-<br>
+                </table>
+              <a href="/grades" class="btn btn-primary">Go Grades</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<th><h1>grade  {{$grade->grade_group}} subjects</h1></th>
-<br>
-<table border="1" class="table table-success table-striped " style="width: min-content; margin-left:300px; margin-top:100px">
-@foreach ($grade->subjects as $subject)
-<td><a href="{{url("subjects/$subject->id")}}">{{$subject->subject_name}}</a></td>
-
-@endforeach
-
-</table>
 
 
 

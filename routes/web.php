@@ -22,7 +22,12 @@ use App\Http\Controllers\SubjectController;
     'subjects'=>SubjectController::class,
 ]));
 Route::get('/', function () {
-    return view('welcome');
+
+    $students=Student::paginate(15);
+    $grades=Grade::paginate(15);
+    $subjects=Subject::paginate(15);
+    return view('dashboard',compact('students','grades','subjects'));
+
 });
 
 // Route::get('/{pages}', function ($pages = 'welcome') {
