@@ -1,6 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
+use App\Models\Student;
+use App\Models\Grade;
+use App\Models\Subject;
+
+
 
 use Illuminate\Http\Request;
 
@@ -11,7 +15,8 @@ class GradeController extends Controller
      */
     public function index()
     {
-        //
+        $grades=Grade::paginate(15);
+        return view('grade.index',compact('grades'));
     }
 
     /**
@@ -40,7 +45,7 @@ class GradeController extends Controller
 
 
 
-     return view('grade.index',compact('grade','students'));
+     return view('grade.show',compact('grade','students'));
     }
 
     /**

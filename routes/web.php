@@ -16,21 +16,18 @@ use App\Http\Controllers\SubjectController;
 // Route::resource('/subjects', SubjectController::class);
 // Route::resource('/grades', GradeController::class);
 //---------method 2-----------
-Route::resources(([
-    'students'=>StudentController::class,
+ Route::resources(([
+     'students'=>StudentController::class,
     'grades'=>GradeController::class,
     'subjects'=>SubjectController::class,
 ]));
-
-
-Route::get('/{pages}', function ($pages='welcome') {
-
-
-
-
-
-        return view('pages/'.$pages);
+Route::get('/', function () {
+    return view('welcome');
 });
+
+// Route::get('/{pages}', function ($pages = 'welcome') {
+//     return view('pages/' . $pages);
+// });
 
 //  Route::get('/studentsss', function () {
 

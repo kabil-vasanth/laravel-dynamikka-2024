@@ -1,53 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
+<x-layout-static>
 
-
-
-    <h1>{{$grade->grade_name}}</h1>
-    <table border="1" class="table table-success table-striped " style="width: min-content; margin-left:200px; margin-top:50px">
-
+    <h1 style="font-style:italic">Grades Details</h1>
+    {{-- {{$students->total()}} --}}
+    <table border="1" class="table table-success table-striped " style="width:80%; margin-left:100px" >
         <tr>
-            <th>firstname</th>
-        <th>lastname</th>
-       </tr>
 
-    @foreach ($students as $student)
+        <th>gradename</th>
+        <th>gradeorder</th>
+        <th>gradecolor</th>
+        <th>gradegroup</th>
+        </tr>
+    @foreach ($grades as $grade)
     <tr>
 
-        <td><a href="{{url("students/$student->id")}}">{{$student->first_name}}</a></td>
-        <td>{{$student->last_name}}</td>
-    {{-- <td><a href="{{url("students/$students->id")}}">show</a></td> --}}
-    </tr>
+
+        <td ><a href="{{url("grades/$grade->id")}}" >{{$grade->grade_name}}</a></td>
+        <td>{{$grade->grade_order}}</td>
+        <td>{{$grade->grade_color}}</td>
+        <td>{{$grade->grade_group}}</td>
+
+
+
+
+     </tr>
 
 
 
         @endforeach
 
-</table>
-<br>
-<br>
+ </table>
+{{$grades->links()}}
 
-<th><h1>grade  {{$grade->grade_group}} subjects</h1></th>
-<br>
-<table border="1" class="table table-success table-striped " style="width: min-content; margin-left:300px; margin-top:100px">
-@foreach ($grade->subjects as $subject)
-<td><a href="{{url("subjects/$subject->id")}}">{{$subject->subject_name}}</a></td>
-
-@endforeach
-
-</table>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+{{-- {{$students->links()}} --}}
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
-</html>
+
+</x-layout-static>

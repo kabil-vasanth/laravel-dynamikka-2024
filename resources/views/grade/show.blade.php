@@ -1,62 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-
+<x-layout-static>
 <body>
-    <h1>student  details</h1>
-    <table border="1"  class="table table-success table-striped " style="width: min-content; margin-left:300px; margin-top:100px">
-        <tr>
-           <td> <h1>firstname</h1></td>
-           <td> <h1>lastname</h1></td>
-            <td><h1>gradename</h1></td>
-           <td> <h1>gradeorder</h1></td>
-           <td> <h1>gradecolor</h1></td>
-          <td>  <h1>gradegroup</h1></td>
-        </tr>
 
 
+
+    <h1>{{$grade->grade_name}}</h1>
+    <table border="1" class="table table-success table-striped " style="width: min-content; margin-left:200px; margin-top:50px">
 
         <tr>
-            <td>{{ $student->first_name }}</td>
-            <td>{{ $student->last_name }}</td>
+            <th>firstname</th>
+        <th>lastname</th>
+       </tr>
 
-            <td><a href="{{url("grades/$student->grade_id")}}">{{ $student->grade->grade_name }}</a></td>
-            <td>{{ $student->grade->grade_order }}</td>
-            <td>{{ $student->grade->grade_color }}</td>
-            <td>{{ $student->grade->grade_group }}</td>
+    @foreach ($students as $student)
+    <tr>
 
-        </tr>
-
-
-
+        <td><a href="{{url("students/$student->id")}}">{{$student->first_name}}</a></td>
+        <td>{{$student->last_name}}</td>
+    {{-- <td><a href="{{url("students/$students->id")}}">show</a></td> --}}
+    </tr>
 
 
-    </table>
-    <br>
-    <h1>student subject details</h1>
 
-    <table border="1" class="table table-success table-striped " style="width: min-content; margin-left:300px; ">
-        @foreach ($student->subjects as $subject)
-            <tr>
-                <td><a href="{{ url("subjects/$subject->id") }}">{{ $subject->subject_name }}</a></td>
-                <td>{{ $subject->subject_order }}</td>
-                <td>{{ $subject->subject_color }}</td>
-
-            </tr>
         @endforeach
 
+</table>
+<br>
+<br>
 
-    </table>
+<th><h1>grade  {{$grade->grade_group}} subjects</h1></th>
+<br>
+<table border="1" class="table table-success table-striped " style="width: min-content; margin-left:300px; margin-top:100px">
+@foreach ($grade->subjects as $subject)
+<td><a href="{{url("subjects/$subject->id")}}">{{$subject->subject_name}}</a></td>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+@endforeach
+
+</table>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
+</x-layout-static>
 
-</html>
+

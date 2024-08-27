@@ -1,7 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\Student;
+use App\Models\Grade;
+use App\Models\Subject;
+
+
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -9,22 +12,12 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($p)
-    {
-//           $input = $request->all();
-
-//           $name=$request->query('page');
-// dd($name);
+     public function index()
+     {
 
 
-
-
-        // $student = DB::Select(*from students')->get();
-
-
-        // return $name;
         $students=Student::paginate(15);
-        return view('pages.'.$p,compact('students'));
+        return view('student.index',compact('students'));
     }
 
     /**
@@ -51,7 +44,7 @@ class StudentController extends Controller
         $student=Student::find($id);
 
 
-    return view('grade.show',compact('student'));
+    return view('student.show',compact('student'));
     }
 
     /**

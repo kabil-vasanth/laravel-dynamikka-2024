@@ -14,8 +14,8 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        $subjects=Subject::find($id);
- $students=Grade::find($id)->students;
+        $subjects=Subject::paginate(15);
+
 
 
 
@@ -44,9 +44,9 @@ class SubjectController extends Controller
      */
     public function show(string $id)
     {
-        $subjects=Subject::find($id);
-        $students=Grade::find($id)->students;
-        return view('subject.index',compact('subjects'));
+        $subject=Subject::find($id);
+
+        return view('subject.show',compact('subject'));
     }
 
     /**
