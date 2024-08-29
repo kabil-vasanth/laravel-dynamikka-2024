@@ -21,7 +21,7 @@
 
     <tr>
 
-        <td><a href="{{url("subjects/$subject->id")}}">{{$subject->subject_name}}</a></td>
+        <td><a href="{{url("subjects/$subject->id")}}"style="color:white">{{$subject->subject_name}}</a></td>
         <td>{{$subject->subject_order}}</td>
         <td>{{$subject->color}}</td>
 
@@ -38,8 +38,8 @@
 
         @endforeach
     </table>
-    <a href="/students" class="btn btn-primary">Go Students</a>
-    <a href="/grades" class="btn btn-primary">Go Grades</a>
+    <a href="/students" class="btn btn-dark">Go Students</a>
+    <a href="/grades" class="btn btn-dark">Go Grades</a>
     </div>
 </div>
     {{$subjects->links()}}

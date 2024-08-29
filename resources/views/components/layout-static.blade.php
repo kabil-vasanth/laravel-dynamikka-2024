@@ -17,7 +17,9 @@
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html" style="color:rgb(246, 243, 237)">J/HARTLEY COLLEGE</a>
+            <img src="{{ Vite::asset('resources/images/mydynamica_logo.jpg') }}" style="width:30px; ;">>
+            {{-- <img src="https://mydynamica.com/assets/images/logo/logo-white.png" class="img-thumbnail" alt="..."> --}}
+            <a class="navbar-brand ps" href="index.html" style="color:rgb(246, 243, 237)">MY DYnamica</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->

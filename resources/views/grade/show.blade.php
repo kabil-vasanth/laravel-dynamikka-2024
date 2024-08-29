@@ -18,7 +18,7 @@
                 @foreach ($students as $student)
                 <tr>
 
-                    <td><a href="{{url("students/$student->id")}}">{{$student->first_name}}</a></td>
+                    <td><a href="{{url("students/$student->id")}}"style="color:white">{{$student->first_name}}</a></td>
                     <td>{{$student->last_name}}</td>
                 {{-- <td><a href="{{url("students/$students->id")}}">show</a></td> --}}
                 </tr>
@@ -28,25 +28,25 @@
                     @endforeach
 
             </table>
-              <a href="/grades" class="btn btn-primary">Go Grades</a>
+              <a href="/grades" class="btn btn-dark">Go Grades</a>
             </div>
           </div>
         </div>
         <div class="col-sm-6" style="width:500px; margin-top:100px">
           <div class="card">
             <div class="card-body">
-                <th><h3>Grade  {{$grade->grade_group}} subjects</h3></th>
+                <th><h5>Grade  {{$grade->grade_group}} subjects</h5></th>
 
 
                 <table border="1" class="table table-success table-striped " >
                     <tr><th>Subjects</th><tr>
                 @foreach ($grade->subjects as $subject)
-                <tr><td><a href="{{url("subjects/$subject->id")}}">{{$subject->subject_name}}</a></td></tr>
+                <tr><td><a href="{{url("subjects/$subject->id")}}"style="color:white">{{$subject->subject_name}}</a></td></tr>
 
                 @endforeach
 
                 </table>
-              <a href="/grades" class="btn btn-primary">Go Grades</a>
+              <a href="/grades" class="btn btn-dark">Go Grades</a>
             </div>
           </div>
         </div>

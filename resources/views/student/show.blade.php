@@ -1,10 +1,11 @@
 
 <x-layout-static>
+    <h3 style="color: rgb(114, 113, 112)"><i class="fa-sharp-duotone fa-solid fa-child fa-2xl" style="margin-left:20px; margin-top:20px; color:rgb(159, 156, 156)"></i>Students Details</h3>
 
     <div class="row">
-        <div class="col-sm-6">
-          <div class="card" style="margin-top:150px">
-            <h2 style="color:rgb(134, 167, 234)">Student  Details</h2>
+        <div class="col-sm-6"style="width:500px; margin-top:100px; margin-left:70px;">
+          <div class="card" >
+            <h5 style="color:rgb(160, 161, 162)">Student  Details</h5>
             <div class="card-body">
                 <table border="1"  class="table table-success table-striped " >
                     <tr>
@@ -20,7 +21,7 @@
                         <td>{{ $student->first_name }}</td>
                         <td>{{ $student->last_name }}</td>
 
-                        <td><a href="{{url("grades/$student->grade_id")}}">{{ $student->grade->grade_name }}</a></td>
+                        <td><a href="{{url("grades/$student->grade_id")}}"style="color:white">{{ $student->grade->grade_name }}</a></td>
 
 
                     </tr>
@@ -34,15 +35,15 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="card"  style="margin-top:150px">
-            <h2 style="color:rgb(134, 167, 234)">Students Subject Details</h2>
+        <div class="col-sm-6"style="width:500px; margin-top:100px; ">
+          <div class="card"  >
+            <h5 style="color:rgb(160, 161, 162)">Students Subject Details</h5>
             <div class="card-body">
                 <table border="1" class="table table-success table-striped "   >
 
                     @foreach ($student->subjects as $subject)
                         <tr>
-                            <td><a href="{{ url("subjects/$subject->id") }}">{{ $subject->subject_name }}</a></td>
+                            <td><a href="{{ url("subjects/$subject->id") }}"style="color:white">{{ $subject->subject_name }}</a></td>
                             <td>{{ $subject->subject_order }}</td>
                             <td>{{ $subject->subject_color }}</td>
 
