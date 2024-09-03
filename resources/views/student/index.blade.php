@@ -1,10 +1,10 @@
 <x-layout-static>
-    <body style="background-color: #1A1919;">
+    <body style="background-color: #2c3045;">
         <div class="container mt-4">
-            <h5 class="text-light">Students Details</h5>
+            <h4 style="color: #9e9ea2;">Students Details</h4>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/" class="text-light" style="text-decoration: none;">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="/" class="text-white" style="text-decoration: none;">Dashboard</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><a href="/students" class="text-light" style="text-decoration: none;">Students</a></li>
                 </ol>
             </nav>
@@ -31,9 +31,9 @@
                 </button>
             </div> --}}
 
-            <div class="card mb-4" style="background-color: #080808;">
+            <div class="card mb-4" style="background-color: #3e3e5a;">
                 <div class="card-body">
-                  <h6 style="color:white">  Students {{ $students->count() }}</h6>
+                  <h6 style="color:rgb(148, 149, 152)">  Students {{ $students->count() }}</h6>
                     <table id="datatablesSimple" class="table table-dark table-striped">
                         <thead>
                             <tr>
@@ -46,11 +46,11 @@
                             @foreach ($students as $student)
                             <tr>
                                 <td>
-                                    <a href="{{ url('students/'.$student->id) }}" class="text-warning" style="text-decoration: none; color:antiquewhite">{{ $student->first_name }}</a>
+                                    <a href="{{ url('students/'.$student->id) }}"  style="text-decoration: none; color:#a3a3d0">{{ $student->first_name }}</a>
                                 </td>
                                 <td>{{ $student->last_name }}</td>
                                 <td>
-                                    <a href="{{ url('grades/'.$student->grade_id) }}" class="text-warning" style="text-decoration: none;color:antiquewhite">{{ $student->grade->grade_name }}</a>
+                                    <a href="{{ url('grades/'.$student->grade_id) }}" style="text-decoration: none;color:#b1b1f6">{{ $student->grade->grade_name }}</a>
                                 </td>
                             </tr>
                             @endforeach

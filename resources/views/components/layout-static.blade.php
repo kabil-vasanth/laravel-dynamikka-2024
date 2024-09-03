@@ -17,16 +17,16 @@
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <img src="{{ Vite::asset('resources/images/mydynamica_logo.jpg') }}" style="width:30px; ;">
+            <img src="{{ Vite::asset('resources/images/mydynamica_logo.jpg') }}" style="width:30px;margin-left:10px ;">
             {{-- <img src="https://mydynamica.com/assets/images/logo/logo-white.png" class="img-thumbnail" alt="..."> --}}
-            <a class="navbar-brand ps" href="index.html" style="color:rgb(246, 243, 237)">MY DYnamica</a>
+            <a class="navbar-brand ps-2" href="index.html" style="color:rgb(246, 243, 237)">MY DYnamica</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-dark" style="color:darkgoldenrod"id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                    <button class="btn btn-secondary" style="color:rgb(18, 17, 18)"id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
             </form>
             <!-- Navbar-->
@@ -38,21 +38,21 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
 
-                            <a class="nav-link" href="/">
+                            <a class="nav-link" href="/" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
 
-                               <a class="nav-link" href="/students" style="color:darkgoldenrod">
+                               <a class="nav-link" href="/students" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Students
                             </a>
-                            <a class="nav-link" href="/grades"style="color:darkgoldenrod">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <a class="nav-link" href="/grades">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Grades
                             </a>
-                            <a class="nav-link" href="/subjects"style="color:darkgoldenrod">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <a class="nav-link" href="/subjects">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Subjects
                             </a>
                         </div>
@@ -63,7 +63,7 @@
                     </div>
                 </nav>
             </div>
-            <div id="layoutSidenav_content">
+            <div id="layoutSidenav_content" >
                 {{-- <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Static Navigation</h1>

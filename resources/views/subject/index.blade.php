@@ -1,5 +1,5 @@
 <x-layout-static>
-    <body style="background-color: #1A1A1A; color: #E0E0E0;">
+    <body style="background-color:#2c3045; color: #E0E0E0;">
 
         <div class="container mt-4">
             <h3 class="text-secondary">Subjects Details</h3>
@@ -11,13 +11,12 @@
                     <li class="breadcrumb-item"><a href="/subjects"  style="text-decoration: none; color:aliceblue">Subjects</a></li>
                 </ol>
             </nav>
-            <h6 style="color:white">    Subjects({{ $subjects->count() }})</h6>
+         
 
-            <div class="card mb-4 bg-dark text-light">
-                <div class="card-header bg-dark text-light">
-                    <i class="fas fa-table me-1"></i>
-                    DataTable Example
-                </div>
+            <div class="card mb-4  text-light "style="background-color: #3e3e5a;">
+
+                   <h6 style="color:rgb(163, 161, 161)"> Subjects({{ $subjects->count() }})</h6>
+
                 <div class="card-body">
                     <table class="table table-dark table-striped" id="datatablesSimple" style="width: 100%;">
                         <thead>
@@ -30,7 +29,7 @@
                         <tbody>
                             @foreach ($subjects as $subject)
                                 <tr>
-                                    <td><a href="{{ url("subjects/$subject->id") }}" class="text-light" style="text-decoration: none;">{{ $subject->subject_name }}</a></td>
+                                    <td><a href="{{ url("subjects/$subject->id") }}"  style="text-decoration: none;color:#a3a3d0">{{ $subject->subject_name }}</a></td>
                                     <td>{{ $subject->subject_order }}</td>
                                     <td>{{ $subject->color }}</td>
                                 </tr>

@@ -17,7 +17,7 @@
             <div class="row mb-4">
                 <div class="col-md-6">
                     <div class="card shadow-sm">
-                        <div class="card-header" style="background-color: #000; color: #fff;">
+                        <div class="card-header" style="background-color: #4c4a4a; color: #fff;">
                             <h5 class="card-title mb-0">Grade Students Details({{ $students->count() }})</h5>
                         </div>
                         <div class="card-body">
@@ -45,7 +45,7 @@
 
                 <div class="col-md-6">
                     <div class="card shadow-sm">
-                        <div class="card-header" style="background-color: #000; color: #fff;">
+                        <div class="card-header" style="background-color: #4c4a4a; color: #fff;">
                             <h5 class="card-title mb-0">Grade Subjects Details({{ $grade->subjects->count() }})</h5>
                         </div>
                         <div class="card-body">

@@ -20,7 +20,7 @@
 
                 <div class="col-sm-6 mb-4">
                     <div class="card">
-                        <div class="card-header" style="background-color: #000000; color: #ffffff;">
+                        <div class="card-header" style="background-color: #4c4a4a; color: #ffffff;">
                             <h5>Subject Grades Details({{ $subject->grades->count() }})</h5>
                         </div>
                         <div class="card-body">
@@ -47,10 +47,9 @@
                     </div>
                 </div>
 
-                <!-- Subject Student Details Card -->
                 <div class="col-sm-6 mb-4">
                     <div class="card">
-                        <div class="card-header" style="background-color: #000000; color: #ffffff;">
+                        <div class="card-header" style="background-color: #4c4a4a; color: #ffffff;">
                             <h5>Subject Students Details({{ $subject->students->count() }})</h5>
                         </div>
                         <div class="card-body">

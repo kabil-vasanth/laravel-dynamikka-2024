@@ -1,6 +1,6 @@
 <x-layout-static>
 
-    <body style="background-color: black; color: white;">
+    <body style="background-color: #2b2f44; color: white;">
 
         <div class="container mt-4">
             <h3 class="text-secondary" >Grades Full Details</h3>
@@ -11,13 +11,13 @@
 
                 </ol>
             </nav>
-            <h6 style="color:white">  Grades({{ $grades->count() }})</h6>
 
 
-            <div class="card mb-4 bg-dark">
-                <div class="card-header text-light">
-                    <i class="fas fa-table me-1"></i> DataTable Example
-                </div>
+
+            <div class="card mb-4 "style="background-color: #3e3e5a;">
+
+                    <h7 style="color:rgb(155, 149, 149)">Grades({{ $grades->count() }})</h7>
+
                 <div class="card-body">
                     <table id="datatablesSimple" class="table table-bordered table-dark table-striped" style="width: 80%; margin: 0 auto;">
                         <thead class="thead-light">
@@ -32,7 +32,7 @@
                             @foreach ($grades as $grade)
                                 <tr>
                                     <td>
-                                        <a href="{{ url('grades/' . $grade->id) }}" class="text-white" style="text-decoration: none;">
+                                        <a href="{{ url('grades/' . $grade->id) }}"  style="text-decoration: none; color:#a3a3d0">
                                             {{ $grade->grade_name }}
                                         </a>
                                     </td>
@@ -43,9 +43,9 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <div class="d-flex justify-content-center mt-3">
-                        <a href="/students" class="btn btn-light me-2" style="text-decoration: none;">Go Students</a>
-                        <a href="/subjects" class="btn btn-light" style="text-decoration: none;">Go Subjects</a>
+                    <div class="  mt-3 ">
+                        <a href="/students" class="btn btn-secondary" style="text-decoration: none; ">Go Students</a>
+                        <a href="/subjects" class="btn btn-secondary" style="text-decoration: none;">Go Subjects</a>
                     </div>
                 </div>
             </div>
