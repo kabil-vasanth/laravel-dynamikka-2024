@@ -34,7 +34,7 @@
             <div class="card mb-4" style="background-color: #3e3e5a;">
                 <div class="card-body">
                   <h6 style="color:rgb(148, 149, 152)">  Students {{ $students->count() }}</h6>
-                    <table id="datatablesSimple" class="table table-dark table-striped">
+                    <table id="datatablesSimple" class="table table-dark table-striped" style="border-radius:20px">
                         <thead>
                             <tr>
                                 <th>First Name</th>
