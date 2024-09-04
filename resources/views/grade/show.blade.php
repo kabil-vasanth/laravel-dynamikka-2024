@@ -24,13 +24,16 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
+                                        <th>Image</th>
                                         <th>First Name</th>
                                         <th>Last Name</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($students as $student)
                                         <tr>
+                                            <tr> <td> <img src="{{ Vite::asset('resources/images/download1.png') }}" alt="Student Photo" class="img-fluid rounded" style="width:60px"></td>
                                             <td><a href="{{ url("students/$student->id") }}" class="text-dark" style="text-decoration: none;">{{ $student->first_name }}</a></td>
                                             <td>{{ $student->last_name }}</td>
                                         </tr>

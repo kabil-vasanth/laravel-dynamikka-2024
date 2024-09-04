@@ -19,7 +19,7 @@
                     <h7 style="color:rgb(155, 149, 149)">Grades({{ $grades->count() }})</h7>
 
                 <div class="card-body">
-                    <table id="datatablesSimple" class="table table-bordered table-dark table-striped" style="width: 80%; margin: 0 auto;">
+                    <table id="datatablesSimple" class="table table-bordered table-dark table-striped" style="width: 80%; margin: 0 auto;border-radius: 15px; overflow: hidden; border: 1px solid rgb(116, 114, 114); box-shadow: 0 4px 8px 0 rgba(137, 156, 240, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);">
                         <thead class="thead-light">
                             <tr>
                                 <th>Grade Name</th>

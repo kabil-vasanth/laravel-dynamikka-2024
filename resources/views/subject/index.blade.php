@@ -11,14 +11,14 @@
                     <li class="breadcrumb-item"><a href="/subjects"  style="text-decoration: none; color:aliceblue">Subjects</a></li>
                 </ol>
             </nav>
-         
+
 
             <div class="card mb-4  text-light "style="background-color: #3e3e5a;">
 
                    <h6 style="color:rgb(163, 161, 161)"> Subjects({{ $subjects->count() }})</h6>
 
                 <div class="card-body">
-                    <table class="table table-dark table-striped" id="datatablesSimple" style="width: 100%;">
+                    <table class="table table-dark table-striped" id="datatablesSimple" style="width: 100%;border-radius: 15px; overflow: hidden; border: 1px solid rgb(116, 114, 114); box-shadow: 0 4px 8px 0 rgba(137, 156, 240, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);">
                         <thead>
                             <tr>
                                 <th>Subject Name</th>

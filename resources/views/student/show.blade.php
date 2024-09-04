@@ -59,23 +59,18 @@
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-striped">
-                            <thead class="table-success">
-                                <tr>
-                                    <th>Subject Name</th>
-                                    <th>Order</th>
-                                    <th>Color</th>
-                                </tr>
-                            </thead>
+
                             <tbody>
                                 @foreach ($student->subjects as $subject)
                                 <tr>
+                                    <td><i class="fa-solid fa-book-open" style="color: rgb(11, 117, 131)"></i></td>
                                     <td>
                                         <a href="{{ url('subjects/' . $subject->id) }}" class="text-black" style="text-decoration: none;">
                                             {{ $subject->subject_name }}
                                         </a>
                                     </td>
-                                    <td>{{ $subject->subject_order }}</td>
-                                    <td>{{ $subject->subject_color }}</td>
+
+
                                 </tr>
                                 @endforeach
                             </tbody>

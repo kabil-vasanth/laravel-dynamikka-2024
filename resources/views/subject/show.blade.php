@@ -55,14 +55,14 @@
                         <div class="card-body">
                             <table border="1" class="table table-striped table-bordered">
                                 <thead>
-                                    <tr>
+                                    <tr><th>Image</th>
                                         <th>First Name</th>
                                         <th>Last Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($subject->students as $student)
-                                        <tr>
+                                        <tr> <td> <img src="{{ Vite::asset('resources/images/download1.png') }}" alt="Student Photo" class="img-fluid rounded" style="width:60px"></td>
                                             <td><a href="{{ url("students/$student->id") }}" style="color: #000000; text-decoration: none;">{{ $student->first_name }}</a></td>
                                             <td>{{ $student->last_name }}</td>
                                         </tr>

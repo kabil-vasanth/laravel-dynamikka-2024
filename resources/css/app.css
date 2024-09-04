@@ -11244,3 +11244,13 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+
+.datatable-bottom{
+    visibility: hidden;
+}
+.datatable-selector{
+    visibility: hidden;
+}
+.form-control{
+    background-color: #373b3e;
+}
