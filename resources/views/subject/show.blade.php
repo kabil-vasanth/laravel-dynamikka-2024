@@ -3,15 +3,15 @@
 
         <div class="container mt-4">
 
-            <h4 style="color:rgb(129, 129, 129)"> <i class="fa-solid fa-book"> </i>  {{$subject->subject_name}}  Subject Details</h4>
+            <h4 style="color:rgb(243, 142, 9)"> <i class="fa-solid fa-book"> </i>  {{$subject->subject_name}}  Subject Details</h4>
 
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/" style="color: #000000; text-decoration: none;">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="/subjects" style="color: #000000; text-decoration: none;">Subjects</a></li>
+                    <li class="breadcrumb-item"><a href="/" style="color: #fdfcfc; text-decoration: none;">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="/subjects" style="color: #fcf9f9; text-decoration: none;">Subjects</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        <a href="{{ url("subjects/$subject->id") }}" style="color: #000000; text-decoration: none;">Subject Student & Grade Details</a>
+                        <a href="{{ url("subjects/$subject->id") }}" style="color: white; text-decoration: none;">Subject Student & Grade Details</a>
                     </li>
                 </ol>
             </nav>
@@ -20,7 +20,7 @@
 
                 <div class="col-sm-6 mb-4">
                     <div class="card">
-                        <div class="card-header" style="background-color: #4c4a4a; color: #ffffff;">
+                        <div class="card-header" style="background-color: #0a0a0a; color: #ffffff;">
                             <h5>Subject Grades Details({{ $subject->grades->count() }})</h5>
                         </div>
                         <div class="card-body">
@@ -49,7 +49,7 @@
 
                 <div class="col-sm-6 mb-4">
                     <div class="card">
-                        <div class="card-header" style="background-color: #4c4a4a; color: #ffffff;">
+                        <div class="card-header" style="background-color: #0c0c0c; color: #ffffff;">
                             <h5>Subject Students Details({{ $subject->students->count() }})</h5>
                         </div>
                         <div class="card-body">

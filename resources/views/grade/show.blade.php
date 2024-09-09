@@ -2,14 +2,14 @@
     <body style="background-color: #f8f9fa; color: #212529;">
 
         <div class="container mt-4">
-            <h3 class="font-italic text-dark mb-4"><i class="fas fa-child fa-2x" style="color: rgb(159, 156, 156); margin-right: 10px;"></i>{{ $grade->grade_name }} Grades Details</h3>
+            <h3 class="font-italic text-warning mb-4"><i class="fas fa-child fa-2x" style="color: rgb(238, 146, 8); margin-right: 10px;"></i>{{ $grade->grade_name }} Grades Details</h3>
 
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/" class="text-dark" style="text-decoration: none;">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="/grades" class="text-dark" style="text-decoration: none;">Grades</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="{{ url("grades/$grade->id") }}" class="text-dark" style="text-decoration: none;">Grade Student & Subject Details</a></li>
+                    <li class="breadcrumb-item"><a href="/" class="text-white" style="text-decoration: none;">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="/grades" class="text-white" style="text-decoration: none;">Grades</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="{{ url("grades/$grade->id") }}" class="text-white" style="text-decoration: none;">Grade Student & Subject Details</a></li>
                 </ol>
             </nav>
 
@@ -17,7 +17,7 @@
             <div class="row mb-4">
                 <div class="col-md-6">
                     <div class="card shadow-sm">
-                        <div class="card-header" style="background-color: #4c4a4a; color: #fff;">
+                        <div class="card-header" style="background-color: #0e0d0d; color: #fff;">
                             <h5 class="card-title mb-0">Grade Students Details({{ $students->count() }})</h5>
                         </div>
                         <div class="card-body">
@@ -48,7 +48,7 @@
 
                 <div class="col-md-6">
                     <div class="card shadow-sm">
-                        <div class="card-header" style="background-color: #4c4a4a; color: #fff;">
+                        <div class="card-header" style="background-color: #080808; color: #fff;">
                             <h5 class="card-title mb-0">Grade Subjects Details({{ $grade->subjects->count() }})</h5>
                         </div>
                         <div class="card-body">

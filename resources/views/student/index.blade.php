@@ -9,8 +9,9 @@
                 </ol>
             </nav>
 
-            <div class="card mb-4" style="background-color: #3e3e5a; border-radius: 15px;">
+            <div class="card mb-4" style="background-color: #323235; border-radius: 15px;">
                 <div class="card-body">
+                    <td> <a href="{{ url("students/create") }}" class="btn btn-warning" style="margin-left: 900px"><i class="fa-solid fa-eye"></i>create</a></td>
                     <h6 style="color:rgb(148, 149, 152)">Students {{ $students->count() }}</h6>
                     <table id="datatablesSimple" class="table table-dark table-striped" style="border-radius: 15px; overflow: hidden; border: 1px solid rgb(116, 114, 114); box-shadow: 0 4px 8px 0 rgba(137, 156, 240, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);">
                         <thead>
@@ -19,19 +20,30 @@
                                 <th>Last Name</th>
                                 <th>Grade Name</th>
                                 <th>show</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($students as $student)
                             <tr>
                                 <td>
-                                    <a href="{{ url('students/'.$student->id) }}" style="text-decoration: none; color:#a3a3d0">{{ $student->first_name }}</a>
+                                    <a href="{{ url('students/'.$student->id) }}" style="text-decoration: none; color:#f7f5ef">{{ $student->first_name }}</a>
                                 </td>
                                 <td>{{ $student->last_name }}</td>
                                 <td>
-                                    <a href="{{ url('grades/'.$student->grade_id) }}" style="text-decoration: none;color:#b1b1f6">{{ $student->grade->grade_name }}</a>
+                                     <a href="{{ url('grades/'.$student->grade_id) }}" style="text-decoration: none;color:#f0f0f5">{{ $student->grade->grade_name }}</a>
                                 </td>
-                                <td> <a href="{{ url('students/'.$student->id) }}" class="btn btn-primary"><i class="fa-solid fa-eye"></i>View</a></td>
+                                <td> <a href="{{ url('students/'.$student->id) }}" class="btn btn-warning"><i class="fa-solid fa-eye"></i>View</a></td>
+                                <td> <a href="{{ url("students/$student->id/edit") }}" class="btn btn-warning"><i class="fa-solid fa-eye"></i>edit</a></td>
+
+                                <td>
+                                    <form action="/students/{{$student->id}}" method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <input type="submit" value="Delete" class="btn btn-warning" onclick="return confirm('sure want Delete')">
+                                    </form>
+
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

@@ -2,7 +2,7 @@
     <body style="background-color:#2c3045; color: #E0E0E0;">
 
         <div class="container mt-4">
-            <h3 class="text-secondary">Subjects Details</h3>
+            <h3 class="text-warning">Subjects Details</h3>
 
 
             <nav aria-label="breadcrumb">
@@ -13,17 +13,18 @@
             </nav>
 
 
-            <div class="card mb-4  text-light "style="background-color: #3e3e5a;">
+            <div class="card mb-4  text-light "style="background-color: #323235;">
 
                    <h6 style="color:rgb(163, 161, 161)"> Subjects({{ $subjects->count() }})</h6>
 
                 <div class="card-body">
+                    <td> <a href="{{ url("subjects/create") }}" class="btn btn-warning" style="margin-left: 900px"><i class="fa-solid fa-eye"></i>create</a></td>
                     <table class="table table-dark table-striped" id="datatablesSimple" style="width: 100%;border-radius: 15px; overflow: hidden; border: 1px solid rgb(116, 114, 114); box-shadow: 0 4px 8px 0 rgba(137, 156, 240, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);">
                         <thead>
                             <tr>
                                 <th>Subject Name</th>
                                 <th>Subject Order</th>
-                                <th>Color</th>
+                                <th>Show</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,7 +32,17 @@
                                 <tr>
                                     <td><a href="{{ url("subjects/$subject->id") }}"  style="text-decoration: none;color:#a3a3d0">{{ $subject->subject_name }}</a></td>
                                     <td>{{ $subject->subject_order }}</td>
-                                    <td>{{ $subject->color }}</td>
+                                    <td> <a href="{{ url("subjects/$subject->id") }}" class="btn btn-warning"><i class="fa-solid fa-eye"></i>View</a></td>
+                                    <td> <a href="{{ url("subjects/$subject->id/edit") }}" class="btn btn-warning"><i class="fa-solid fa-eye"></i>edit</a></td>
+                                    <td>
+                                        <form action="/subjects/{{$subject->id}}" method="post">
+                                            @method('delete')
+                                            @csrf
+                                            <input type="submit" value="Delete" class="btn btn-warning" onclick="return confirm('sure want Delete')">
+                                        </form>
+
+                                    </td>
+
                                 </tr>
                             @endforeach
                         </tbody>

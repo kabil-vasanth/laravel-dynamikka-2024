@@ -25,14 +25,21 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view("student.create");
+        $grades=Grade::pluck('grade_name','id');
+        return view("student.create",compact('grades'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
+
     {
+        $student=new Student;
+        $student->first_name=$request->input("first_name");
+        $student->last_name=$request->input("last_name");
+        $student->grade_id=$request->input("grade_id");
+        $student->save();
         return $request;
 
     }
@@ -53,7 +60,9 @@ class StudentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $student=Student::find($id);
+        $grades=Grade::pluck('grade_name','id');
+        return view("student.edit",compact('grades','student'));
     }
 
     /**
@@ -61,7 +70,12 @@ class StudentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $student=Student::find($id);
+        $student->first_name=$request->input("first_name");
+        $student->last_name=$request->input("last_name");
+        $student->grade_id=$request->input("grade_id");
+        $student->save();
+
     }
 
     /**
@@ -69,6 +83,8 @@ class StudentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $student = Student::find($id);
+        $student->delete();
+        return redirect('students');
     }
 }

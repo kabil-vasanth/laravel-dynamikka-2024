@@ -1,14 +1,14 @@
 <x-layout-static >
     <div class="container mt-4" >
-        <h3 class="text-secondary">
-            <i class="fas fa-child fa-2x" style="color: rgb(159, 156, 156); margin-right: 10px;"></i>
+        <h3  style="color:rgb(245, 146, 17);">
+
             {{ $student->first_name }} {{ $student->last_name }}
         </h3>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/" class="text-dark" style="text-decoration: none;">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="/students" class="text-dark" style="text-decoration: none;">Students</a></li>
-                <li class="breadcrumb-item"><a href="{{ url("students/$student->id") }}" class="text-dark" style="text-decoration: none;">Student Grade & Subject Details</a></li>
+                <li class="breadcrumb-item"><a href="/" class="text-white" style="text-decoration: none;color:rgb(248, 242, 242)">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="/students" class="text-white" style="text-decoration: none;">Students</a></li>
+                <li class="breadcrumb-item"><a href="{{ url("students/$student->id") }}" class="text-white" style="text-decoration: none;">Student Grade & Subject Details</a></li>
             </ol>
         </nav>
 
@@ -18,7 +18,7 @@
                     <div class="card-header text-center bg-dark text-light">
                         <h5>Student Details</h5>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: rgb(245, 240, 240)">
                         <div class="row">
                             <div class="col-md-5 ">
                                 <img src="{{ Vite::asset('resources/images/download1.png') }}" alt="Student Photo" class="img-fluid rounded" style=" margin-right:40px">

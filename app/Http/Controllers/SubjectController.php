@@ -28,7 +28,7 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
+        return view("subject.create");
     }
 
     /**
@@ -36,7 +36,12 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $subject=new Subject;
+        $subject->subject_name=$request->input("subject_name");
+        $subject->subject_order=$request->input("subject_order");
+        $subject->color=$request->input("color");
+        $subject->save();
+        return redirect('subjects');
     }
 
     /**
@@ -54,15 +59,21 @@ class SubjectController extends Controller
      */
     public function edit(string $id)
     {
-        //
-    }
+        $subject=Subject::find($id);
 
+        return view("subject.edit",compact('subject'));
+    }
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        //
+        $subject=Subject::find($id);
+        $subject->subject_name=$request->input("subject_name");
+        $subject->subject_order=$request->input("subject_order");
+        $subject->color=$request->input("color");
+        $subject->save();
+        return redirect('subjects');
     }
 
     /**
@@ -70,6 +81,9 @@ class SubjectController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
+        $subject = Subject::find($id);
+        $subject->delete();
+        return redirect('subjects');
     }
 }

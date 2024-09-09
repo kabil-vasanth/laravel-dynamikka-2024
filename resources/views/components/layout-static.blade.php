@@ -57,13 +57,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="sb-sidenav-footer">
+                    <div class="sb-sidenav-footer" style="background-color: rgb(36, 35, 35)">
                         <div class="small">Logged in as:</div>
                         Start Bootstrap
                     </div>
                 </nav>
             </div>
-            <div id="layoutSidenav_content" >
+            <div id="layoutSidenav_content" style="background-color:rgb(231, 219, 219)"  >
                 {{-- <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Static Navigation</h1>
@@ -87,7 +87,7 @@
                     </div>
                 </main> --}}
                 {{$slot}}
-                <footer class="py-4 bg-light mt-auto">
+                <footer class="py-4 bg-dark mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; Your Website 2023</div>
