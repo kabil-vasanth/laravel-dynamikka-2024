@@ -1,39 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Edit Students</h1>
-    <form action="/students/{{$student->id}}" method="POST">
-        @csrf
-        @method('put')
-        <label for="first_name">FirstName</label>
-        <input type="text" id="first_name" name="first_name" value="{{$student->first_name}}">
-        <label for="last_name">LastName</label>
-        <input type="text" id="last_name" name="last_name" value="{{$student->last_name}}">
-        <label for="grade_id">GradeName</label>
-      <select id="grade_id" name="grade_id" value={{$student->grade->grade_name}}>
-        @foreach ($grades as $k=>$v)
+<x-layout-static>
 
-        <option value="{{$k}}" {{($k==$student->grade_id)?"selected":""}}>{{$v}}</option>
-
-        @endforeach
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Edit Student</title>
 
 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+        <style>
+            body {
+                background-color: #060606;
+                color: #f5f5f5;
+            }
+            .form-container {
+                background-color: #1e1e1e;
+                padding: 40px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+            .form-label {
+                color: #f5b609;
+            }
+            .btn-warning {
+                background-color: #f5b609;
+                border: none;
+            }
+            .btn-warning:hover {
+                background-color: #ffca28;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h4 class="text-center" style="color: #f5b609;">Edit Student Information</h4>
 
-      </select>
+            <div class="form-container mx-auto" style="max-width: 500px;">
+                <form action="/students/{{$student->id}}" method="POST">
+                    @csrf
+                    @method('put')
 
-<input type='submit' value='Update'>
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" id="first_name" name="first_name" class="form-control" value="{{$student->first_name}}" required>
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" class="form-control" value="{{$student->last_name}}" required>
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="grade_id" class="form-label">Grade</label>
+                        <select id="grade_id" name="grade_id" class="form-select" required>
+                            @foreach ($grades as $k => $v)
+                            <option value="{{$k}}" {{($k==$student->grade_id)?"selected":""}}>{{$v}}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-warning">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    </form>
-
-</body>
-</html>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
+    </x-layout-static>

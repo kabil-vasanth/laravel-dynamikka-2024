@@ -61,8 +61,9 @@ class GradeController extends Controller
     public function edit(string $id)
     {
         $grade=Grade::find($id);
-       
-        return view("grade.edit",compact('grade'));
+        $grades=Grade::pluck('grade_name','id');
+
+        return view("grade.edit",compact('grade','grades'));
     }
 
     /**

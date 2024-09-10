@@ -1,3 +1,4 @@
+<x-layout-static>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,18 @@
         @csrf
         @method('put')
         <label for="grade_name">GradeName</label>
-        <input type="text" id="grade_name" name="grade_name" value="{{$grade->grade_name}}">
+
+        <select id="grade_name" name="grade_name" >
+            @foreach ($grades as $k=>$v)
+
+            <option value="{{$k}}" {{($k==$grade->grade_id)?"selected":""}}>{{$v}}</option>
+
+            @endforeach
+    </select>
+
+
+
+
         <label for="grade_group">GradeGroup</label>
         <input type="text" id="grade_group" name="grade_group" value="{{$grade->grade_group}}">
         <label for="grade_order">GradeOrder</label>
@@ -25,7 +37,7 @@
 
 
 
-<input type='submit' value='Update'>
+
 
 
 
@@ -34,3 +46,4 @@
 
 </body>
 </html>
+</x-layout-static>

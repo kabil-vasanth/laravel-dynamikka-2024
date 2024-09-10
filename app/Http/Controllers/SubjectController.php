@@ -60,8 +60,9 @@ class SubjectController extends Controller
     public function edit(string $id)
     {
         $subject=Subject::find($id);
+        $subjects=Subject::pluck('subject_name','id');
 
-        return view("subject.edit",compact('subject'));
+        return view("subject.edit",compact('subject','subjects'));
     }
     /**
      * Update the specified resource in storage.

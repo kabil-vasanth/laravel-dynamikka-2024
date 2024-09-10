@@ -13,6 +13,8 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
 
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     </head>
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -63,7 +65,7 @@
                     </div>
                 </nav>
             </div>
-            <div id="layoutSidenav_content" style="background-color:rgb(231, 219, 219)"  >
+            <div id="layoutSidenav_content" style="background-color:rgb(46, 45, 45)"  >
                 {{-- <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Static Navigation</h1>

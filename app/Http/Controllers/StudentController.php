@@ -26,6 +26,7 @@ class StudentController extends Controller
     public function create()
     {
         $grades=Grade::pluck('grade_name','id');
+
         return view("student.create",compact('grades'));
     }
 
@@ -40,7 +41,7 @@ class StudentController extends Controller
         $student->last_name=$request->input("last_name");
         $student->grade_id=$request->input("grade_id");
         $student->save();
-        return $request;
+        return redirect('students');
 
     }
 
@@ -75,6 +76,7 @@ class StudentController extends Controller
         $student->last_name=$request->input("last_name");
         $student->grade_id=$request->input("grade_id");
         $student->save();
+        return redirect('students');
 
     }
 

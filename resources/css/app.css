@@ -11251,6 +11251,15 @@ body {
 .datatable-selector{
     visibility: hidden;
 }
-.form-control{
-    background-color: #373b3e;
+/* .form-control{
+    background-color: black;
+    color:white;
 }
+
+.form-label{
+    color: white;
+}
+.form-select{
+    background-color: black;
+    color: white;
+} */
