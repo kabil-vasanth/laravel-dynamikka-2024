@@ -35,7 +35,7 @@
                                      <a href="{{ url('grades/'.$student->grade_id) }}" style="text-decoration: none;color:#f0f0f5">{{ $student->grade->grade_name }}</a>
                                 </td>
                                 <td> <a href="{{ url('students/'.$student->id) }}" class="btn btn-warning"><i class="fa-solid fa-eye"></i></a></td>
-                                <td> <a href="{{ url("students/$student->id/edit") }}" class="btn btn-warning"><i class="bi bi-pen-fill"></i></i></a></td>
+                                <td> <a href="{{ url("students/$student->id/edit") }}" class="btn btn-warning"><i class="bi bi-pen-fill"></i></a></td>
 
                                 <td>
                                     <form action="/students/{{$student->id}}" method="post" >
